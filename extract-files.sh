@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BASE=../../../vendor/samsung/lt02wifi/proprietary
+BASE=../../../vendor/samsung/lt02wifiue/proprietary
 rm -rf $BASE/*
 
 for FILE in `egrep -v '(^#|^$)' proprietary-files.txt`; do
@@ -9,8 +9,7 @@ for FILE in `egrep -v '(^#|^$)' proprietary-files.txt`; do
     mkdir -p $BASE/$DIR
   fi
   # My way of pulling blobs without the device
-  cp ~/android/tab3/system/$FILE $BASE/$FILE
+  cp ~/android/dump/$FILE $BASE/$FILE
 done
 
 ./setup-makefiles.sh
-

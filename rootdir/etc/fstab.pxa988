@@ -5,16 +5,11 @@
 #TODO: Add 'check' as fs_mgr_flags with data partition.
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
-#<src>                                                <mnt_point>  <type>      <mnt_flags and options>                     <fs_mgr_flags>
-/dev/block/platform/sdhci-pxav3.2/by-name/SYSTEM      /system       ext4       ro,noatime                                  wait
-/dev/block/platform/sdhci-pxav3.2/by-name/CACHE       /cache        ext4       noatime,nosuid,nodev,errors=panic           wait,check
-/dev/block/platform/sdhci-pxav3.2/by-name/EFS         /efs          ext4       noatime,nosuid,nodev,errors=panic           wait,check
-/dev/block/platform/sdhci-pxav3.2/by-name/USER        /data         ext4       noatime,nosuid,nodev,errors=panic,discard,noauto_da_alloc  wait,check,encryptable=footer
-
-# vold-managed volumes ("block device" is actually a sysfs devpath)
-/devices/platform/sdhci-pxav3.0/mmc_host/mmc1        /storage/sdcard1        auto        defaults        voldmanaged=sdcard1:auto
-
-# recovery
-/dev/block/mmcblk0p9                                  /boot         emmc       defaults                recoveryonly
-/dev/block/mmcblk0p10                                 /recovery     emmc       defaults                recoveryonly
-/dev/null                                             /sdcard       datamedia  defaults                recoveryonly
+#<src>                                                <mnt_point>       <type>      <mnt_flags and options>                     <fs_mgr_flags>
+/dev/block/platform/sdhci-pxav3.2/by-name/KERNEL      /boot             emmc        defaults   defaults
+/dev/block/platform/sdhci-pxav3.2/by-name/RECOVERY    /recovery         emmc        defaults   defaults
+/dev/block/platform/sdhci-pxav3.2/by-name/SYSTEM      /system           ext4        ro,noatime                                  wait
+/dev/block/platform/sdhci-pxav3.2/by-name/CACHE       /cache            ext4        noatime,nosuid,nodev,errors=panic           wait,check
+/dev/block/platform/sdhci-pxav3.2/by-name/EFS         /efs              ext4        noatime,nosuid,nodev,errors=panic           wait,check
+/dev/block/platform/sdhci-pxav3.2/by-name/USER        /data             ext4        noatime,nosuid,nodev,errors=panic,discard,noauto_da_alloc  wait,check,encryptable=footer
+/devices/platform/sdhci-pxav3.0/mmc_host/mmc1        /storage/sdcard1   auto        defaults        voldmanaged=sdcard:auto

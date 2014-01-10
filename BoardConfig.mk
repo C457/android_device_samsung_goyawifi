@@ -14,7 +14,7 @@
 #
 
 # inherit from the proprietary version
--include vendor/samsung/lt02wifi/BoardConfigVendor.mk
+-include vendor/samsung/lt02wifiue/BoardConfigVendor.mk
 
 # Target info
 USE_CAMERA_STUB := true
@@ -38,7 +38,7 @@ TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
 
 # Kernel
 TARGET_KERNEL_SOURCE  := kernel/samsung/lt02-common
-TARGET_KERNEL_CONFIG  := pxa986_lt02wifi_blackhawk_defconfig
+TARGET_KERNEL_CONFIG  := cyanogenmod_lt02wifi_defconfig
 BOARD_KERNEL_CMDLINE  := 
 BOARD_KERNEL_BASE     := 0x10000000
 BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x01000000
@@ -52,7 +52,7 @@ BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
 RECOVERY_FSTAB_VERSION := 2
-TARGET_RECOVERY_FSTAB := device/samsung/lt02wifi-common/rootdir/etc/fstab.pxa988
+TARGET_RECOVERY_FSTAB := device/samsung/lt02wifiue/rootdir/etc/fstab.pxa988
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 12582912
@@ -88,7 +88,7 @@ TARGET_FORCE_CPU_UPLOAD := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/lt02wifi/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/lt02wifiue/bluetooth
 BOARD_HAVE_BLUETOOTH_BCM := true
 USE_BLUETOOTH_SAP := false
 

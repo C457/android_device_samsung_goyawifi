@@ -1,3 +1,7 @@
 #
 # system.prop for lt02wifi
 #
+
+ro.sf.lcd_density=160
+ro.lcd_min_brightness=20
+ro.sf.hwrotation=270

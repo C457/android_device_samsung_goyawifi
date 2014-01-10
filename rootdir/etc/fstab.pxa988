@@ -12,7 +12,7 @@
 /dev/block/platform/sdhci-pxav3.2/by-name/USER        /data         ext4       noatime,nosuid,nodev,errors=panic,discard,noauto_da_alloc  wait,check,encryptable=footer
 
 # vold-managed volumes ("block device" is actually a sysfs devpath)
-/devices/platform/sdhci-pxav3.0/mmc_host/mmc1         auto          auto       defaults                voldmanaged=sdcard1:auto
+/devices/platform/sdhci-pxav3.0/mmc_host/mmc1        /storage/sdcard1        auto        defaults        voldmanaged=sdcard1:auto
 
 # recovery
 /dev/block/mmcblk0p9                                  /boot         emmc       defaults                recoveryonly

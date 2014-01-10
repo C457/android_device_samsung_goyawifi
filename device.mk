@@ -27,12 +27,12 @@ PRODUCT_PACKAGES += \
 
 # Recovery rootdir
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/recovery/init.recovery.pxa988.rc:root/init.recovery.pxa988.rc \
-    $(COMMON_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
+    $(LOCAL_PATH)/recovery/init.recovery.pxa988.rc:root/init.recovery.pxa988.rc \
+    $(LOCAL_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Wifi
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+    $(LOCAL_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
@@ -40,39 +40,39 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/sirfgps.conf:system/etc/sirfgps.conf
+    $(LOCAL_PATH)/configs/sirfgps.conf:system/etc/sirfgps.conf
 
 # Graphics config
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/gfx.cfg:system/etc/gfx.cfg \
-    $(COMMON_PATH)/configs/dms.cfg:system/etc/dms.cfg
+    $(LOCAL_PATH)/configs/gfx.cfg:system/etc/gfx.cfg \
+    $(LOCAL_PATH)/configs/dms.cfg:system/etc/dms.cfg
 
 # Prebuilt Keylayout
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    $(COMMON_PATH)/keylayout/88pm80x_on.kl:system/usr/keylayout/88pm80x_on.kl \
-    $(COMMON_PATH)/keylayout/88pm800_hook_vol.kl:system/usr/keylayout/88pm800_hook_vol.kl \
-    $(COMMON_PATH)/keylayout/pxa27x-keypad.kl:system/usr/keylayout/pxa27x-keypad.kl \
-    $(COMMON_PATH)/keylayout/sec_touchscreen.kl:system/usr/keylayout/sec_touchscreen.kl\
-    $(COMMON_PATH)/keylayout/Vendor_04e8_Product_7021.kl:system/usr/keylayout/Vendor_04e8_Product_7021.kl \
-    $(COMMON_PATH)/keylayout/vnc-kbd.kl:system/usr/keylayout/vnc-kbd.kl
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/keylayout/88pm80x_on.kl:system/usr/keylayout/88pm80x_on.kl \
+    $(LOCAL_PATH)/keylayout/88pm800_hook_vol.kl:system/usr/keylayout/88pm800_hook_vol.kl \
+    $(LOCAL_PATH)/keylayout/pxa27x-keypad.kl:system/usr/keylayout/pxa27x-keypad.kl \
+    $(LOCAL_PATH)/keylayout/sec_touchscreen.kl:system/usr/keylayout/sec_touchscreen.kl\
+    $(LOCAL_PATH)/keylayout/Vendor_04e8_Product_7021.kl:system/usr/keylayout/Vendor_04e8_Product_7021.kl \
+    $(LOCAL_PATH)/keylayout/vnc-kbd.kl:system/usr/keylayout/vnc-kbd.kl
 
 # Prebuilt Keychars
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/keychars/vnc-kbd.kcm:system/usr/keychars/vnc-kbd.kcm \
-    $(COMMON_PATH)/keychars/pxa27x-keypad.kcm:system/usr/keychars/pxa27x-keypad.kcm \
+    $(LOCAL_PATH)/keychars/vnc-kbd.kcm:system/usr/keychars/vnc-kbd.kcm \
+    $(LOCAL_PATH)/keychars/pxa27x-keypad.kcm:system/usr/keychars/pxa27x-keypad.kcm \
 
 # Prebuilt idc file
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/idc/elan-ts.idc:system/usr/idc/elan-ts.idc \
-    $(COMMON_PATH)/idc/ft5306-ts.idc:system/usr/idc/ft5306-ts.idc \
-    $(COMMON_PATH)/idc/vnc-ts.idc:system/usr/idc/vnc-ts.idc
+    $(LOCAL_PATH)/idc/elan-ts.idc:system/usr/idc/elan-ts.idc \
+    $(LOCAL_PATH)/idc/ft5306-ts.idc:system/usr/idc/ft5306-ts.idc \
+    $(LOCAL_PATH)/idc/vnc-ts.idc:system/usr/idc/vnc-ts.idc
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/asound.conf:system/etc/asound.conf \
-    $(COMMON_PATH)/configs/audio_effects.conf:system/etc/audio_effects.conf \
-    $(COMMON_PATH)/configs/Volume.db:system/etc/Volume.db
+    $(LOCAL_PATH)/configs/asound.conf:system/etc/asound.conf \
+    $(LOCAL_PATH)/configs/audio_effects.conf:system/etc/audio_effects.conf \
+    $(LOCAL_PATH)/configs/Volume.db:system/etc/Volume.db
 
 # Alsa Libs
 PRODUCT_COPY_FILES += $(foreach alsa,\

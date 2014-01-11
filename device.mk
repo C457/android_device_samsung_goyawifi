@@ -140,6 +140,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # No SELinux
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.zygote.disable_gl_preload=true \
+    ro.bq.gpu_to_cpu_unsupported=1 \
     ro.boot.selinux=disabled
 
 # Graphics

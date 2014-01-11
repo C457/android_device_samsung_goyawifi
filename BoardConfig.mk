@@ -70,9 +70,10 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/f_mass_storage/lun%d/
 # MRVL hardware
 BOARD_USES_MRVL_HARDWARE := true
 
-
 # Graphics
+BOARD_EGL_CFG := device/samsung/lt02wifiue/configs/egl.cfg
 USE_OPENGL_RENDERER := true
+COMMON_GLOBAL_CFLAGS += -DEGL_NEEDS_FNW -DFORCE_SCREENSHOT_CPU_PATH
 
 # Boot animation
 TARGET_BOOTANIMATION_PRELOAD := true

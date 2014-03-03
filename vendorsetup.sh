@@ -1,1 +1,1 @@
-add_lunch_combo cm_lt02wifiue-eng
+add_lunch_combo cm_goyawifi-eng

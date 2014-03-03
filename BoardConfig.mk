@@ -14,7 +14,7 @@
 #
 
 # inherit from the proprietary version
--include vendor/samsung/lt02wifiue/BoardConfigVendor.mk
+-include vendor/samsung/goyawifi/BoardConfigVendor.mk
 
 # Target info
 USE_CAMERA_STUB := true
@@ -37,8 +37,8 @@ TARGET_GLOBAL_CFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
 
 # Kernel
-TARGET_KERNEL_SOURCE  := kernel/samsung/lt02-common
-TARGET_KERNEL_CONFIG  := cyanogenmod_lt02wifi_defconfig
+TARGET_KERNEL_SOURCE  := kernel/samsung/goyawifi
+TARGET_KERNEL_CONFIG  := cyanogenmod_goyawifi_defconfig
 BOARD_KERNEL_CMDLINE  := 
 BOARD_KERNEL_BASE     := 0x10000000
 BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x01000000
@@ -52,55 +52,25 @@ BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
 RECOVERY_FSTAB_VERSION := 2
-TARGET_RECOVERY_FSTAB := device/samsung/lt02wifiue/rootdir/etc/fstab.pxa988
+TARGET_RECOVERY_FSTAB := device/samsung/goyawifi/rootdir/etc/fstab.pxa988
 
 TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_BOOTIMAGE_PARTITION_SIZE := 12582912
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 12582912
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1507852288
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 5775556608
+BOARD_BOOTIMAGE_PARTITION_SIZE := 0x105c0000
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x105c0000
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x105c0000
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Vold
-BOARD_VOLD_MAX_PARTITIONS := 17
+#BOARD_VOLD_MAX_PARTITIONS := 17
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/f_mass_storage/lun%d/file"
-
-# MRVL hardware
-BOARD_USES_MRVL_HARDWARE := true
-
-# Graphics
-BOARD_EGL_CFG := device/samsung/lt02wifiue/configs/egl.cfg
-USE_OPENGL_RENDERER := true
-COMMON_GLOBAL_CFLAGS += -DEGL_NEEDS_FNW -DFORCE_SCREENSHOT_CPU_PATH
-
-# Boot animation
-TARGET_BOOTANIMATION_PRELOAD := true
-TARGET_BOOTANIMATION_TEXTURE_CACHE := true
-TARGET_BOOTANIMATION_USE_RGB565 := true
-
-# Audio
-BOARD_USES_ALSA_AUDIO := true
-
-# Webkit
-ENABLE_WEBGL := true
-TARGET_FORCE_CPU_UPLOAD := true
-
-# Bluetooth
-BOARD_HAVE_BLUETOOTH := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/lt02wifiue/bluetooth
-BOARD_HAVE_BLUETOOTH_BCM := true
-USE_BLUETOOTH_SAP := false
-
 
 # Charging mode
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
 BOARD_BATTERY_DEVICE_NAME := "battery"
-
-# Sec_touchscreen
-INPUT_TOUCH_DRIVER := TOUCH_LT
 
 #TWRP
 DEVICE_RESOLUTION := 1024x600

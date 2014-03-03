@@ -1,5 +1,5 @@
 # Release name
-PRODUCT_RELEASE_NAME := lt02wifiue
+PRODUCT_RELEASE_NAME := goyawifi
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1024
@@ -12,8 +12,8 @@ $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 $(call inherit-product, device/samsung/lt02wifiue/full_lt02wifiue.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := lt02wifiue
-PRODUCT_NAME := cm_lt02wifiue
+PRODUCT_DEVICE := goyawifi
+PRODUCT_NAME := cm_goyawifi
 PRODUCT_BRAND := Samsung
-PRODUCT_MODEL := SM-T210R
+PRODUCT_MODEL := SM-T110
 PRODUCT_MANUFACTURER := samsung
